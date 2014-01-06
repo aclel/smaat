@@ -1,4 +1,7 @@
 Smaat::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/parents"
+  get "static_pages/students"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
