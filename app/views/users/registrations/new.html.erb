@@ -8,15 +8,39 @@
 
   		<div><%= f.label :first_name %><br />
   		<%= f.text_field :first_name, :autofocus => true%></div>
-  		
+
+  		<div><%= f.label :last_name %><br />
+  		<%= f.text_field :last_name%></div>
+
+  		<div><%= f.label :form %><br />
+  		<%= f.text_field :form %></div>
+
+  		<div><%= f.check_box :tuesday %>
+  		<%= f.label :tuesday %><br /></div>
+
+  		<div><%= f.check_box :wednesday %>
+  		<%= f.label :wednesday %><br /></div>
+
+  		<div><%= f.check_box :thursday %>
+  		<%= f.label :thursday %><br /></div>
+
+  		<div><%= f.label :parent_name %><br />
+  		<%= f.text_field :parent_name %></div>
+
 		  <div><%= f.label :email %><br />
 		  <%= f.email_field :email%></div>
+
+		  <div><%= f.label :contact%><br />
+  		<%= f.text_field :contact%></div>
 
 		  <div><%= f.label :password %><br />
 		  <%= f.password_field :password %></div>
 
 		  <div><%= f.label :password_confirmation %><br />
 		  <%= f.password_field :password_confirmation %></div>
+
+  		<div><%= f.check_box :reports %>
+		  <%= f.label :reports %><br /></div>
 
 		  <div><%= f.submit "Create my account", class: "btn btn-large btn-primary"%></div>
 		<% end %>
