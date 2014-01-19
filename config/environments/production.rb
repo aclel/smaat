@@ -93,13 +93,12 @@ Smaat::Application.configure do
   #   password: "Csandwich1"
   # }
 
-  cconfig.action_mailer.smtp_settings = {
-    :address              => 'smtp.gmail.com',
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'gmail.com',
-    :user_name            => 'andrew.cleland3@gmail.com',
-    :password             => 'Csandwich1',
-    :authentication       => 'login',
+    :user_name            => "andrew.cleland3@gmail.com",
+    :password             => "Csandwich1",
+    :authentication       => "plain",
     :enable_starttls_auto => true
   }
 end
