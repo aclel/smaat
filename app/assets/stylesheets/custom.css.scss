@@ -46,12 +46,29 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
-  font-weight: normal;
-  color: #999;
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h4 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 p {
@@ -61,61 +78,41 @@ p {
 
 /* header */
 
-.navbar .brand {
-    max-height: 40px;
-    overflow: visible;
-    position: absolute;
-    padding-top: 10;
-    padding-bottom: 0;
+.navbar-inner {
+    background-color: #32cee5;
+    border-color: #5bcfc9;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none;
 }
 
-/* Customize the navbar links to be fill the entire space of the .navbar */
-.navbar .navbar-inner {
-    padding: 0;
+.navbar-inner .nav > li > a {
+    font-size: 1em;
+    color: #ecf0f1;
+    font-weight: 200;
 }
 
-.navbar .nav {
-    margin: 0;
-    display: table;
-    width: 100%;
+.navbar-inner .nav > li > a:hover,
+.navbar-inner .nav > li > a:focus {
+    color: #C9F2F2;
+    background-color: #5bcfc9;
 }
 
-.navbar .nav li {
-    display: table-cell;
-    width: 1%;
-    float: none;
+.navbar-inner .nav > .active > a, 
+.navbar-inner .nav > .active > a:hover, 
+.navbar-inner .nav > .active > a:focus {
+    color: #8afa9e;
 }
 
-.navbar .nav li a {
-    text-align: center;
-    border-left: 1px solid rgba(255, 255, 255, .75);
-    border-right: 1px solid rgba(0, 0, 0, .1);
-    color: #FBFBFB;
-    &:hover {
-      color: white;
-      text-decoration: none;
-    }
-}
-
-.navbar .nav li:first-child a {
-    border-left: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.navbar .nav li:last-child a {
-    border-right: 0;
-    border-radius: 0 3px 3px 0;
-}
-
-/* dropdown menu */
-
-.navbar .nav li .dropdown-menu li {
-  display: block;
-  width: auto;
-}
-
-.dropdown-menu {
-  left:auto;
+.navbar-inner .nav > .open > a, 
+.navbar-inner .nav > .open > a:hover, 
+.navbar-inner .nav > .open > a:focus {
+    color: #8afa9e;
 }
 
 /* forms */
@@ -144,7 +141,8 @@ input {
   @extend .error;
 }
 
-/*flash*/
+/* flash */
+
 .alert-error {
     background-color: #f2dede;
     border-color: #eed3d7;
@@ -172,6 +170,8 @@ input {
     color: #468847;
     text-align: left;
  }
+
+
 
 
 
