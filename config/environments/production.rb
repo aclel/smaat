@@ -78,7 +78,7 @@ Smaat::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { :host => 'http://smaat.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'smaat.herokuapp.com' }
 
   require 'tlsmail'    
   Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
