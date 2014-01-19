@@ -79,15 +79,20 @@ Smaat::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => "http://smaat.herokuapp.com" }
-  config.action_mailer.smtp_settings = {
-        :address => "smtp.gmail.com",
-        :port => 587,
-        :domain => 'gmail.com',
-        :user_name => "andrew.cleland3@gmail.com",
-        :password => "Csandwich1",
-        :authentication => :plain,
-        :enable_starttls_auto => true
+  require 'tlsmail'    
+  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+    :enable_starttls_auto => true,  
+    :address            => 'smtp.gmail.com',
+    :port               => 587,
+    :tls                  => true,
+    :domain             => 'gmail.com', 
+    :authentication     => :plain,
+    :user_name          => 'andrew.cleland3@gmail.com',
+    :password           => 'Csandwich1'
   }
 end
