@@ -92,6 +92,8 @@ Smaat::Application.configure do
   #   user_name: "andrew.cleland3@gmail.com",
   #   password: "Csandwich1"
   # }
+  
+  config.action_mailer.default_url_options = { :host => 'http://smaat.herokuapp.com' }
 
   ActionMailer::Base.smtp_settings = {
     :address              => "smtp.gmail.com",
