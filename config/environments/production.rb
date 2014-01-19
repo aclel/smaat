@@ -92,15 +92,17 @@ Smaat::Application.configure do
   #   user_name: "andrew.cleland3@gmail.com",
   #   password: "Csandwich1"
   # }
-  
+
   config.action_mailer.default_url_options = { :host => 'http://smaat.herokuapp.com' }
 
+  ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :user_name            => "andrew.cleland3@gmail.com",
-    :password             => "Csandwich1",
-    :authentication       => "plain",
-    :enable_starttls_auto => true
-  }
+   :tls => true,
+   :address => "smtp.gmail.com",
+   :port => 587,
+   :domain => "gmail.com",
+   :authentication => :login,
+   :user_name => "andrew.cleland3",
+   :password => "Csandwich1"
+ }
 end
