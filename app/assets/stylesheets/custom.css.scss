@@ -1,3 +1,9 @@
+$navbarBackground:                #3198ff ;
+$navbarBackgroundHighlight:       #2bbded ;
+$navbarText:                      #323333;
+$navbarLinkColor:                 #323333 ;
+$navbarSearchPlaceholderColor:    #EEC844 ;
+
 @import "bootstrap";
 
 @mixin box_sizing {
@@ -74,45 +80,6 @@ h5 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-}
-
-/* header */
-
-.navbar-inner {
-    background-color: #32cee5;
-    border-color: #5bcfc9;
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    background-repeat: no-repeat;
-    filter: none;
-}
-
-.navbar-inner .nav > li > a {
-    font-size: 1em;
-    color: #ecf0f1;
-    font-weight: 200;
-}
-
-.navbar-inner .nav > li > a:hover,
-.navbar-inner .nav > li > a:focus {
-    color: #C9F2F2;
-    background-color: #5bcfc9;
-}
-
-.navbar-inner .nav > .active > a, 
-.navbar-inner .nav > .active > a:hover, 
-.navbar-inner .nav > .active > a:focus {
-    color: #8afa9e;
-}
-
-.navbar-inner .nav > .open > a, 
-.navbar-inner .nav > .open > a:hover, 
-.navbar-inner .nav > .open > a:focus {
-    color: #8afa9e;
 }
 
 /* forms */
