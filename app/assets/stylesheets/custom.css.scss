@@ -1,8 +1,10 @@
-$navbarBackground:                #3198ff ;
-$navbarBackgroundHighlight:       #2bbded ;
-$navbarText:                      #323333;
-$navbarLinkColor:                 #323333 ;
-$navbarSearchPlaceholderColor:    #EEC844 ;
+$navbarBackground:                #00146E ;
+$navbarBackgroundHighlight:       #00146E ;
+$navbarText:                      #FFFFFF;
+$navbarLinkColor:                 #FFFFFF ;
+$navbarSearchPlaceholderColor:    #405DDE ;
+$navbarLinkColorActive: #FFFFFF;
+$navbarLinkColorHover: #FFFFFF;
 
 @import "bootstrap";
 
@@ -45,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 6em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -137,6 +139,12 @@ input {
     color: #468847;
     text-align: left;
  }
+
+ /* Center align the text within the three columns below the slider */
+.col-md-4 {
+  float: left;
+}
+
 
 
 
