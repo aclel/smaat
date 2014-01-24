@@ -5,15 +5,16 @@
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
 
-  		<div><%= f.label :first_name %><br />
-  		<%= f.text_field :first_name, :autofocus => true%></div>
+  		<div><%= f.label :first_name, "Student's First Name" %>
+  		<%= f.text_field :first_name, :autofocus => true%><br /></div>
 
-  		<div><%= f.label :last_name %><br />
-  		<%= f.text_field :last_name%></div>
+  		<div><%= f.label :last_name, "Student's Last Name" %>
+  		<%= f.text_field :last_name%><br /></div>
 
-  		<div><%= f.label :form %><br />
-  		<%= f.text_field :form %></div>
+  		<div><%= f.label :form, "Form Class" %>
+  		<%= f.text_field :form %><br /></div>
 
+      <p>Which days would you like to attend?</p>
   		<div><%= f.check_box :tuesday %>
   		<%= f.label :tuesday %><br /></div>
 
@@ -21,25 +22,27 @@
   		<%= f.label :wednesday %><br /></div>
 
   		<div><%= f.check_box :thursday %>
-  		<%= f.label :thursday %><br /></div>
+  		<%= f.label :thursday %><br /><br /></div>
 
-  		<div><%= f.label :parent_name %><br />
-  		<%= f.text_field :parent_name %></div>
+  		<div><%= f.label :parent_name, "Parent's Name"%>
+  		<%= f.text_field :parent_name %><br /></div>
 
-		  <div><%= f.label :email %><br />
-		  <%= f.email_field :email%></div>
+		  <div><%= f.label :email, "Parent's Email" %>
+		  <%= f.email_field :email%><br /></div>
 
-		  <div><%= f.label :contact%><br />
-  		<%= f.text_field :contact%></div>
+		  <div><%= f.label :contact, "Parent's Contact Phone Number"%>
+  		<%= f.text_field :contact%><br /></div>
 
-		  <div><%= f.label :password %><br />
-		  <%= f.password_field :password %></div>
+		  <div><%= f.label :password %>
+		  <%= f.password_field :password %><br /></div>
 
-		  <div><%= f.label :password_confirmation %><br />
-		  <%= f.password_field :password_confirmation %></div>
+		  <div><%= f.label :password_confirmation %>
+		  <%= f.password_field :password_confirmation %><br /></div>
 
-  		<div><%= f.check_box :reports %>
-		  <%= f.label :reports %><br /></div>
+     <div> <%= f.label :reports do %>
+        <%= f.check_box :reports %>
+        Would you like to receive weekly Session Progress Reports to your email?
+      <% end %><br /><br /></div>
 
 		  <div><%= f.submit "Create my account", class: "btn btn-large btn-primary"%></div>
 		<% end %>
