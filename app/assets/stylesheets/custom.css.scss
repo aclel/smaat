@@ -16,8 +16,6 @@ $navbarLinkColorHover: #FFFFFF;
 
 /* universal */
 
-input, label{ display: inline; }
-
 html {
   overflow-y: scroll;
 }
@@ -102,6 +100,10 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
+input, label { 
+  display: inline; 
+}
+
 input {
   height: auto !important;
 }
@@ -153,6 +155,8 @@ input {
 .col-md-4 {
   float: left;
 }
+
+
 
 
 

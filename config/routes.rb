@@ -1,5 +1,5 @@
 Smaat::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
   root "static_pages#home"
   match '/info', to: "static_pages#info", via: 'get'
   match '/why_smaat', to: "static_pages#why_smaat", via: 'get'

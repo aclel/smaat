@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-
+      <%= devise_error_messages! %>
 
   		<div><%= f.label :first_name, "Student's First Name" %>
   		<%= f.text_field :first_name, :autofocus => true%><br /></div>
@@ -23,6 +23,14 @@
 
   		<div><%= f.check_box :thursday %>
   		<%= f.label :thursday %><br /><br /></div>
+
+      <p>Which subjects would you like assistance with?</p>
+      <div>
+        <%= f.fields_for :subjects do |builder| %>
+          <%= render 'layouts/subject_fields', :f => builder %>
+        <% end %>
+      </div>
+      <p><%= link_to_add_fields "Add Subject", f, :subjects %></p>
 
   		<div><%= f.label :parent_name, "Parent's Name"%>
   		<%= f.text_field :parent_name %><br /></div>
