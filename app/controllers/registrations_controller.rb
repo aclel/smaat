@@ -3,4 +3,8 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new
     @user.subjects.build
   end
+
+  def sign_up_params
+		params.require(resource_name).permit!
+  end
 end

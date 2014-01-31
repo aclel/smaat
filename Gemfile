@@ -7,6 +7,7 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'devise'
 gem 'tlsmail'
 gem 'prototype-rails'
+gem 'nested_form'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
