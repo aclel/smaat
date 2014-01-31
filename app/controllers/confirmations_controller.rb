@@ -5,6 +5,6 @@ class ConfirmationsController < Devise::ConfirmationsController
       else
         new_session_path(resource_name)
       end
-      SignUpInfoMailer.sign_up_information.deliver
+      SignUpInfo.sign_up_information.deliver
   end
 end
