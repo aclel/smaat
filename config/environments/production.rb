@@ -79,7 +79,6 @@ Smaat::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.default_url_options = { :host => 'smaat.herokuapp.com' }
-  config.action_mailer.raise_delivery_errors = true
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
 
