@@ -81,18 +81,15 @@ Smaat::Application.configure do
   config.action_mailer.default_url_options = { :host => 'smaat.herokuapp.com' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
 
 end
 
 ActionMailer::Base.smtp_settings = {
-  address: "smtp.gmail.com",
-  port: 587,
-  user_name: 'andrew.cleland3@gmail.com',
-  password: 'Csandwich1',
-  authentication: 'plain',
-  enable_starttls_auto: true  
+    :port =>           '587',
+    :address =>        'smtp.mandrillapp.com',
+    :user_name =>      ENV['MANDRILL_USERNAME'],
+    :password =>       ENV['MANDRILL_APIKEY'],
+    :domain =>         'heroku.com',
+    :authentication => :plain
 }
+ActionMailer::Base.delivery_method = :smtp

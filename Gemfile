@@ -5,8 +5,6 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'devise'
-gem 'tlsmail'
-gem 'prototype-rails'
 gem 'nested_form'
 
 group :development, :test do
@@ -33,4 +31,5 @@ end
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'mandrill-api'
 end
