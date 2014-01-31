@@ -1,4 +1,4 @@
-class SignupInfoMailer < ActionMailer::Base
+class SignUpInfo < ActionMailer::Base
   default from: "andrew.cleland3@gmail.com"
 
   def sign_up_information
