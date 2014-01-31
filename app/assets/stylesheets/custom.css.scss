@@ -22,6 +22,8 @@ html {
 
 body {
   padding-top: 60px;
+  padding-bottom: 40px;
+  color: #5a5a5a;
 }
 
 section {
@@ -62,7 +64,10 @@ h2 {
 
 h3 {
   text-align: center;
-  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
 h4 {
@@ -87,8 +92,11 @@ h6 {
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
 
 /* forms */
@@ -151,9 +159,34 @@ input {
     text-align: left;
  }
 
- /* Center align the text within the three columns below the slider */
-.col-md-4 {
-  float: left;
+
+/* Featurettes */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
 
