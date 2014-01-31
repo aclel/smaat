@@ -1,0 +1,3 @@
+SignupInfoMailer#email_confirmed
+
+Hi, find me in app/views/signup_info_mailer/email_confirmed
