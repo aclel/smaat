@@ -78,7 +78,7 @@ Smaat::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { :host => 'smaat.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'smaat.com.au' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
@@ -89,7 +89,7 @@ Smaat::Application.configure do
   config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :user_name            => '<andrew.cleland3@gmail.com',
+      :user_name            => 'andrew.cleland3@gmail.com',
       :password             => 'Csandwich1',
       :authentication       => 'plain',
       :enable_starttls_auto => true  
