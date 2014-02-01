@@ -7,6 +7,6 @@ class ConfirmationsController < Devise::ConfirmationsController
 
   private
 		def redirect
-			redirect_to root_path
+			redirect_to "http://smaat.com.au", :alert => "An email has been to you which contains important registration information."
 		end
 end
