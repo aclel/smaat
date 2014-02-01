@@ -2,8 +2,8 @@ class ConfirmationsController < Devise::ConfirmationsController
 	rescue_from Exception, :with => :redirect
   def after_confirmation_path_for(resource_name, resource)
 			super
+      NotificationMailer.notify(@user).deliver
       SignUpInfoMailer.sign_up_information(@user).deliver
-      NotificationMailer.notify(user).deliver
   end
 
   private
