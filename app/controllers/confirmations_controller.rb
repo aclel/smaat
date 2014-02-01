@@ -3,7 +3,7 @@ class ConfirmationsController < Devise::ConfirmationsController
 			super
 			begin
       	SignUpInfoMailer.sign_up_information(@user).deliver
-      rescue 
+      rescue Exception
       	redirect_to root_path
       end
   end
