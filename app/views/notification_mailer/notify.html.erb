@@ -1,6 +1,7 @@
 <p>Yo dawg!</p>
-<p>	Another kid has signed up! :D<br />
-	Here's their info:<br />
+<p>Another kid has signed up! :D</p>
+<p>Here's their info:</p>
+<p>
 	First Name: <%= @user.first_name %><br />
 	Last Name: <%= @user.last_name %><br />
 	Form: <%= @user.form %><br />
@@ -9,6 +10,8 @@
 	Wednesday: <%= @user.wednesday %><br />
 	Subjects:<br />
 	<tbody>
+		<th>Name</th>
+		<th>Focus areas</th>
 		<% @user.subjects.each do |subject| %>
 			  <tr>
           <td><%= subject.name %></th>
