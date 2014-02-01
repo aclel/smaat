@@ -5,13 +5,15 @@
 	First Name: <%= @user.first_name %><br />
 	Last Name: <%= @user.last_name %><br />
 	Form: <%= @user.form %><br />
-	Monday: <%= @user.monday %><br />
 	Tuesday: <%= @user.tuesday %><br />
 	Wednesday: <%= @user.wednesday %><br />
+	Thursday: <%= @user.thursday %><br />
 	Subjects:<br />
 	<tbody>
-		<th>Name</th>
-		<th>Focus areas</th>
+		<tr>
+			<th>Name</th>
+			<th>Focus Areas</th>
+		</tr>
 		<% @user.subjects.each do |subject| %>
 			  <tr>
           <td><%= subject.name %></th>
