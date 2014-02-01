@@ -8,5 +8,6 @@ class ConfirmationsController < Devise::ConfirmationsController
   private
 		def redirect
 			redirect_to root_path
+			flash[:notice] = "An email has been sent which contains important registration information."
 		end
 end
