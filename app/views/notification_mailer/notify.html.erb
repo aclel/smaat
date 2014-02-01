@@ -8,19 +8,19 @@
 	Tuesday: <%= @user.tuesday %><br />
 	Wednesday: <%= @user.wednesday %><br />
 	Thursday: <%= @user.thursday %><br />
+</p>
+<p>
 	Subjects:<br />
 	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Focus Areas</th>
-		</tr>
 		<% @user.subjects.each do |subject| %>
 			  <tr>
           <td><%= subject.name %></th>
           <td><%= subject.description %></th>
         </tr>
 		<% end %>
-	</tbody><br />
+	</tbody>
+</p>
+<p>
 	Parent's Name: <%= @user.parent_name %><br />
 	Parent's Email: <%= @user.email%><br />
 	Parent's Contact Number: <%= @user.contact %><br />
