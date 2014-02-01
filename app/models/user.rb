@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name, :form, :parent_name, :contact
 
-  accepts_nested_attributes_for :subjects, :reject_if => lambda { |a| a[:name, :description].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :subjects, :reject_if => proc { |a| a['name', 'description'].blank? }, :allow_destroy => true
 end
