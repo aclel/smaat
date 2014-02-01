@@ -6,5 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :subjects, :dependent => :destroy
 
+  validates_presence_of :first_name, :last_name, :form, :parent_name, :contact
+
   accepts_nested_attributes_for :subjects, :allow_destroy => true
 end
