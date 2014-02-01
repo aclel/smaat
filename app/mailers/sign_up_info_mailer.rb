@@ -1,5 +1,5 @@
 class SignUpInfoMailer < ActionMailer::Base
-  default from: "smaatenquiries@outlook.com"
+  default from: "andrew.cleland3@gmail.com"
 
   def sign_up_information(user)
   	attachments['parent_student_agreement.pdf'] = File.read(Rails.root.join("app/assets/attachments/parent_student_agreement.pdf"))
