@@ -1,0 +1,26 @@
+<p>Yo dawg!</p>
+<p>	Another kid has signed up! :D<br />
+	Here's their info:<br />
+	First Name: <%= @user.first_name %><br />
+	Last Name: <%= @user.last_name %><br />
+	Form: <%= @user.form %><br />
+	Monday: <%= @user.monday %><br />
+	Tuesday: <%= @user.tuesday %><br />
+	Wednesday: <%= @user.wednesday %><br />
+	Subjects:<br />
+	<tbody>
+		<% @user.subjects.each do |subject| %>
+			  <tr>
+          <th><%= subject.name %></th>
+          <th><%= subject.description %></th>
+        </tr>
+		<% end %>
+	</tbody><br />
+	Parent's Name: <%= @user.parent_name %><br />
+	Parent's Email: <%= <a href=@user.email%>@user.email</a>%><br />
+	Parent's Contact Number: <%= @user.contact %><br />
+	Receive reports?: <%= @user.reports %><br />
+</p>
+
+
+
