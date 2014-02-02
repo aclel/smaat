@@ -132,10 +132,11 @@ div.why ul li {
 }
 
 .home-title {
-  font-size: 70px;
-  font-weight: 400;
+  font-size: 100px;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: -1px;
+  color: #3669A7;
 }
 
 .heading {
@@ -158,6 +159,12 @@ div.why ul li {
 
 .featurette-divider2 {
   margin: 40px 0;
+}
+
+.contact {
+  font-size: 1.5em;
+  font-weight: 200;
+  line-height: 25px;
 }
 
 /* forms */
@@ -273,6 +280,15 @@ input {
   z-index: 0;
   padding-left: 240px;
 }
+
+.navbar .brand {
+  position: absolute;
+  width: 110px;
+  top: 23px;
+  left: 130px;
+}
+
+
 
 
 
