@@ -1,29 +1,62 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+<%= nested_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <div><%= f.label :first_name, "Student's First Name" %>
+  <%= f.text_field :first_name, :autofocus => true%><br /></div>
+
+  <div><%= f.label :last_name, "Student's Last Name" %>
+  <%= f.text_field :last_name%><br /></div>
+
+  <div><%= f.label :form, "Form Class" %>
+  <%= f.text_field :form %><br /></div>
+
+  <p>Which days would you like to attend?</p>
+  <div><%= f.check_box :tuesday %>
+  <%= f.label :tuesday %><br /></div>
+
+  <div><%= f.check_box :wednesday %>
+  <%= f.label :wednesday %><br /></div>
+
+  <div><%= f.check_box :thursday %>
+  <%= f.label :thursday %><br /><br /></div>
+
+  <p>Which subjects would you like assistance with?</p>
+  <div>
+    <%= f.fields_for :subjects do |builder| %>
+      <%= render 'layouts/subject_fields', :f => builder %>
+    <% end %>
+  </div>
+  <p><%= f.link_to_add "Add Subject", :subjects %></p>
+
+  <div><%= f.label :parent_name, "Parent/Guardian's Name"%>
+  <%= f.text_field :parent_name %><br /></div>
+
+  <div><%= f.label :email, "Parent/Guardian's Email" %>
+  <%= f.email_field :email%><br /></div>
+
+  <div><%= f.label :contact, "Parent/Guardian's Contact Phone Number"%>
+  <%= f.text_field :contact%><br /></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div><%= f.label :current_password %><br />
   <%= f.password_field :current_password %></div>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div><%= f.label :password %><br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Update" %></div>
+  <div><%= f.submit "Update", class: "btn btn-default btn-sm btn-primary" %></div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<h2>Cancel my account</h2>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+<p>We hope to see you again.<br /><%= link_to "Cancel my account", registration_path(resource_name), class: "btn btn-default btn-sm btn-primary", :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
 
 <%= link_to "Back", :back %>
