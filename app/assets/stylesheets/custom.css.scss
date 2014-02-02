@@ -23,6 +23,7 @@ html {
 body {
   padding-top: 60px;
   padding-bottom: 40px;
+  padding-left: 40px;
   color: #5a5a5a;
 }
 
@@ -209,6 +210,12 @@ input {
   display: block;
   padding: 10px 20px 10px;
   margin-left: -20px;
+  position: absolute;
+  z-index: 1;
+}
+
+.navbar-inner {
+  z-index: 0;
 }
 
 

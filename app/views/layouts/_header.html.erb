@@ -1,9 +1,9 @@
 <header class="navbar navbar-default navbar-static-top">
+  <li><%= link_to(image_tag("smaat_logo.png",:size => "150x150",:alt=> "logo",:title => "Home"), "/", class: "brand")%></li>
   <div class="navbar-inner">
     <span class="container">
       <nav>
         <ul class="nav navbar-nav">
-          <li><%= link_to(image_tag("smaat_logo.png",:size => "150x150",:alt=> "logo",:title => "Home"), "/", class: "brand")%></li>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Information", info_path %></li>
           <li><%= link_to "Why SMAAT?", why_smaat_path %></li>
