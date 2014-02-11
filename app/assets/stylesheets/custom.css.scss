@@ -118,6 +118,16 @@ p {
   line-height: 25px;
 }
 
+.p-note {
+  font-size: 0.9em;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
 div.why ul li {
   margin-bottom: 10px;
   font-size: 1.5em;
