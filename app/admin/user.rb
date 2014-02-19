@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
 
-    index do
+  index do
     column :first_name
     column :last_name
     column :form
@@ -11,6 +11,8 @@ ActiveAdmin.register User do
     column :parent_name
     column :email
     column :reports
+
+    actions
   end
   
 end

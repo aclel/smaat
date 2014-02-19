@@ -11,11 +11,10 @@ ActiveAdmin.register_page "Dashboard" do
     end
 
   section "Recent Students" do
-    table_for User.order("confirmed_at desc").limit(5) do
+    table_for User.order("created_at desc").limit(5) do
       column :first_name
       column :last_name
       column :form
-      column :confirmed_at
     end
   end
 
