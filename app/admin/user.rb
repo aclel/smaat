@@ -7,7 +7,13 @@ ActiveAdmin.register User do
     column :tuesday
     column :wednesday
     column :thursday
-    column :subjects
+
+    column 'Subjects' do |user| 
+      user.subjects.each do |subject|
+        subject.name
+      end 
+    end
+
     column :parent_name
     column :email
     column :reports
